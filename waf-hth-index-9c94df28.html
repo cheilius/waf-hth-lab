@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>华体会 · 简明指南与访问提醒</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f5f1eb;
+            font-family: 'Segoe UI', 'PingFang SC', Roboto, 'Helvetica Neue', sans-serif;
+            color: #2e2c29;
+            line-height: 1.6;
+            padding: 2rem 1.2rem;
+        }
+
+        .page-wrapper {
+            max-width: 880px;
+            margin: 0 auto;
+            background: #fffcf7;
+            border-radius: 28px;
+            padding: 2.8rem 2rem 3.2rem;
+            box-shadow: 0 8px 28px rgba(0,0,0,0.03), 0 2px 6px rgba(0,0,0,0.02);
+        }
+
+        /* hero 区域 */
+        .hero {
+            margin-bottom: 2.8rem;
+            border-bottom: 1px solid #e7dfd5;
+            padding-bottom: 1.8rem;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background: #e5ddd1;
+            color: #4a4239;
+            font-size: 0.75rem;
+            letter-spacing: 0.5px;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            margin-bottom: 0.8rem;
+        }
+
+        .hero h1 {
+            font-size: 2.1rem;
+            font-weight: 450;
+            letter-spacing: -0.02em;
+            color: #1f1d1a;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1rem;
+            color: #5f5850;
+            max-width: 620px;
+            margin-bottom: 0.3rem;
+        }
+
+        /* 信息卡片网格 */
+        .card-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+            margin-bottom: 2.8rem;
+        }
+
+        .card {
+            background: #f9f5ee;
+            border-radius: 22px;
+            padding: 1.6rem 1.8rem;
+            border-left: 4px solid #dacfbf;
+            transition: all 0.1s ease;
+        }
+
+        .card h2 {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: #332e28;
+            margin-bottom: 0.6rem;
+            letter-spacing: -0.01em;
+        }
+
+        .card p {
+            font-size: 0.96rem;
+            color: #3d3832;
+        }
+
+        /* 引用块 / 提示框 */
+        .callout {
+            background: #efebe4;
+            border-radius: 18px;
+            padding: 1.2rem 1.6rem;
+            margin: 2rem 0 2.2rem;
+            font-size: 0.96rem;
+            border-left: 6px solid #b7aa9a;
+            color: #2d2822;
+        }
+
+        .callout strong {
+            font-weight: 600;
+            color: #1f1b16;
+        }
+
+        .callout a {
+            color: #4d3f32;
+            border-bottom: 1.5px dotted #8f7e6b;
+            text-decoration: none;
+            font-weight: 500;
+            transition: border 0.1s;
+        }
+
+        .callout a:hover {
+            border-bottom: 1.5px solid #3b332b;
+        }
+
+        /* 自然链接段落 */
+        .link-paragraph {
+            padding: 0.8rem 0 0.2rem;
+            font-size: 0.98rem;
+            color: #34302b;
+        }
+
+        .link-paragraph a {
+            color: #3f372f;
+            text-decoration: none;
+            border-bottom: 1px solid #c1b3a3;
+            font-weight: 450;
+        }
+
+        .link-paragraph a:hover {
+            border-bottom: 1px solid #2a241e;
+        }
+
+        .faq-mini {
+            background: #f5efe8;
+            border-radius: 24px;
+            padding: 1.2rem 1.6rem;
+            margin-top: 2.2rem;
+        }
+
+        .faq-mini h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #3a342d;
+            margin-bottom: 0.6rem;
+        }
+
+        .faq-mini p {
+            font-size: 0.92rem;
+            color: #4b443b;
+            margin-bottom: 0.5rem;
+        }
+
+        .faq-mini p:last-child {
+            margin-bottom: 0;
+        }
+
+        .faq-mini .q {
+            font-weight: 500;
+            color: #1f1b17;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e2d9cf;
+            margin: 2rem 0 1.2rem;
+        }
+
+        .footer-note {
+            color: #7b7266;
+            font-size: 0.82rem;
+            text-align: center;
+            margin-top: 2.5rem;
+            letter-spacing: 0.3px;
+        }
+
+        /* 响应式细节 */
+        @media (max-width: 580px) {
+            body {
+                padding: 1rem 0.8rem;
+            }
+            .page-wrapper {
+                padding: 1.8rem 1.2rem 2.2rem;
+                border-radius: 20px;
+            }
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+            .card {
+                padding: 1.2rem 1.4rem;
+            }
+            .callout {
+                padding: 1rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-wrapper">
+
+    <!-- hero 简明指南 -->
+    <div class="hero">
+        <span class="hero-tag">使用指引 · 2025</span>
+        <h1>华体会 · 简明访问指南</h1>
+        <p>不论你是初次接触还是日常使用，这里都可以帮你快速理清方向，省去摸索的麻烦。</p>
+    </div>
+
+    <!-- 信息卡片式：用途卡片 + 适合人群 -->
+    <div class="card-grid">
+
+        <div class="card">
+            <h2>📌 主要用途</h2>
+            <p>围绕兴趣社群与日常活动组织，<strong>华体会</strong> 提供了一种轻量的线上聚合方式。你可以在这里浏览公开信息、了解近期动态，或通过平台内指引参与适合你的互动。整体氛围偏向生活化，不复杂，也不需要额外学习成本。</p>
+        </div>
+
+        <div class="card">
+            <h2>👥 适合什么样的人</h2>
+            <p>如果你喜欢在自然、不被打扰的节奏下获取信息，或者正在寻找一个结构清晰、没有过度推送的活动交流环境，那么 <strong>华体会</strong> 值得你花几分钟看一看。无论是个人浏览还是轻量参与，都比较友好。</p>
+        </div>
+
+        <div class="card">
+            <h2>🌿 常见使用场景</h2>
+            <p>· 想了解近期有哪些公开活动或话题讨论<br>
+               · 需要某个功能入口，但不想被繁复菜单打扰<br>
+               · 习惯先看说明再接触新平台<br>
+               · 偶尔查看通知或更新，不追求高频刷新</p>
+        </div>
+
+    </div>
+
+    <!-- 引用块 / 提示框：访问提醒 + 自然链接 -->
+    <div class="callout">
+        <strong>💡 访问提醒</strong><br>
+        在浏览器地址栏输入或点击下方链接即可进入。如果你使用的是公共设备，建议浏览结束后关闭页面，避免长期保持登录状态。日常访问推荐使用个人设备，既顺手也更安心。<br>
+        <span style="display: inline-block; margin-top: 0.6rem;">👉 直接前往：<a href="https://waf-hth.com.cn" target="_blank" rel="noopener noreferrer">华体会</a></span>
+    </div>
+
+    <!-- 自然链接段落（嵌入句子） -->
+    <div class="link-paragraph">
+        很多朋友第一次接触 <a href="https://waf-hth.com.cn" target="_blank" rel="noopener noreferrer">华体会</a> 时，会习惯先翻一翻有什么内容。其实它的结构比较直观，首页就能看到核心分类，不需要反复跳转。如果你对某个模块感兴趣，点进去通常都有简短的说明，不会让你一头雾水。
+    </div>
+
+    <div class="link-paragraph" style="margin-top: 1rem;">
+        另外，如果你打算把 <a href="https://waf-hth.com.cn" target="_blank" rel="noopener noreferrer">华体会</a> 推荐给朋友，可以直接把链接发给他们，没必要额外解释太多。大部分人打开后自然就知道怎么用了——这大概就是设计得比较清爽的好处。
+    </div>
+
+    <!-- FAQ 摘要（精简） -->
+    <div class="faq-mini">
+        <h3>❓ 你可能想问的</h3>
+        <p><span class="q">Q：需要注册才能浏览吗？</span><br>大部分公开内容可以直接查看，部分互动功能可能需要简单注册，过程很快。</p>
+        <p><span class="q">Q：移动端体验怎么样？</span><br>页面适配了常见屏幕，手机竖屏阅读和操作都没有明显障碍，卡片布局会自动调整。</p>
+        <p><span class="q">Q：有没有使用上的限制？</span><br>遵循一般网络礼仪和平台规则即可，没有特别复杂的门槛。</p>
+    </div>
+
+    <hr>
+
+    <div class="footer-note">
+        本页为独立介绍指南 · 内容仅供了解用途
+    </div>
+
+</div>
+
+</body>
+</html>
