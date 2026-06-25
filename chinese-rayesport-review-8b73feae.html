@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>雷竞技 · 中文站点介绍</title>
+  <style>
+    /* 重置与基础 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      background-color: #f6f8fc;
+      color: #1e2635;
+      line-height: 1.7;
+    }
+
+    /* 深色头图区 */
+    .hero {
+      background: linear-gradient(145deg, #0e1a2b 0%, #182c44 100%);
+      color: #f0f4fa;
+      padding: 5rem 2rem 4rem 2rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      min-height: 38vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 6px;
+      background: linear-gradient(90deg, #f3b745, #e68a2e, #f3b745);
+      opacity: 0.4;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.2rem, 6vw, 3.6rem);
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+
+    .hero .tagline {
+      font-size: 1.15rem;
+      max-width: 600px;
+      margin: 0.8rem auto 0;
+      color: #cbd8e8;
+      font-weight: 300;
+    }
+
+    /* 浅色正文容器 */
+    .content-wrap {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 3rem 1.8rem 4rem 1.8rem;
+    }
+
+    /* 段落间距 */
+    .intro-text {
+      margin-bottom: 2.2rem;
+      font-size: 1.05rem;
+    }
+
+    .intro-text strong {
+      color: #1e3a5f;
+    }
+
+    .intro-text a {
+      color: #c76b1e;
+      text-decoration: none;
+      font-weight: 500;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+
+    .intro-text a:hover {
+      color: #a35312;
+      border-color: #c76b1e;
+    }
+
+    /* 特点卡片组 */
+    .feature-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.8rem;
+      margin: 2.5rem 0 2.8rem 0;
+    }
+
+    .feature-card {
+      flex: 1 1 220px;
+      background: #ffffff;
+      padding: 1.8rem 1.4rem;
+      border-radius: 18px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.03), 0 2px 6px rgba(0, 0, 0, 0.02);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border-left: 4px solid transparent;
+    }
+
+    .feature-card:nth-child(1) { border-left-color: #c76b1e; }
+    .feature-card:nth-child(2) { border-left-color: #2a6f97; }
+    .feature-card:nth-child(3) { border-left-color: #5f8b4c; }
+    .feature-card:nth-child(4) { border-left-color: #b35c44; }
+
+    .feature-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.06);
+    }
+
+    .feature-card h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.6rem;
+      color: #1c2f44;
+      letter-spacing: 0.3px;
+    }
+
+    .feature-card p {
+      font-size: 0.95rem;
+      color: #3a4a5e;
+    }
+
+    /* 温和收束段落 */
+    .gentle-closing {
+      background: #f0f4fc;
+      padding: 2rem 2rem 1.8rem 2rem;
+      border-radius: 20px;
+      margin: 2.8rem 0 1.2rem;
+      border: 1px solid #e3eaf3;
+    }
+
+    .gentle-closing p {
+      margin-bottom: 0.8rem;
+    }
+
+    .gentle-closing a {
+      color: #c76b1e;
+      font-weight: 500;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+
+    .gentle-closing a:hover {
+      border-color: #c76b1e;
+    }
+
+    /* 简单引用/提示行 */
+    .note-line {
+      font-size: 0.92rem;
+      color: #5f6e7e;
+      border-top: 1px solid #d9e1ed;
+      padding-top: 1.8rem;
+      margin-top: 1.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.8rem;
+    }
+
+    .note-line span {
+      background: #e9eef6;
+      padding: 0.1rem 0.9rem;
+      border-radius: 30px;
+      font-size: 0.85rem;
+      color: #2f4360;
+    }
+
+    /* 响应式调整 */
+    @media (max-width: 640px) {
+      .hero {
+        padding: 3.2rem 1.2rem 2.8rem 1.2rem;
+        min-height: 30vh;
+      }
+
+      .content-wrap {
+        padding: 2rem 1.2rem 3rem 1.2rem;
+      }
+
+      .feature-grid {
+        flex-direction: column;
+        gap: 1.2rem;
+      }
+
+      .feature-card {
+        padding: 1.4rem 1.2rem;
+      }
+
+      .gentle-closing {
+        padding: 1.5rem;
+      }
+
+      .note-line {
+        flex-direction: column;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 深色头图：开场短句 -->
+  <header class="hero">
+    <h1>雷竞技</h1>
+    <p class="tagline">一个关于信息整理与站点介绍的说明页</p>
+  </header>
+
+  <!-- 浅色正文区 -->
+  <main class="content-wrap">
+
+    <!-- 承接段落：站点介绍与可信说明 -->
+    <div class="intro-text">
+      <p>
+        这里想认真聊一聊 <strong>雷竞技</strong> 这个站点。它主要面向中文使用者，内容围绕电竞及线上娱乐信息展开，提供赛事资讯、平台介绍以及相关动态整理。如果你平时关注电竞赛事或对线上互动有兴趣，<strong>雷竞技</strong> 或许能成为一个参考信息来源。
+      </p>
+      <p>
+        站点的内容组织比较清晰，导航层次分明，没有过多的广告干扰。从页面结构来看，运营方有意让信息更直接——这在一定程度上减少了浏览过程中的冗余。作为访问者，你可以根据自身需要查看不同板块，而不是被动接收推送。也正是因为这份克制，<a href="https://chinese-rayesport.com">雷竞技</a> 在同类站点中显得更为平实可信。
+      </p>
+    </div>
+
+    <!-- 特点列表 (卡片形式) -->
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h3>信息归类</h3>
+        <p>赛事新闻、平台评测、游戏攻略等按栏目划分，便于快速定位感兴趣的内容。</p>
+      </div>
+      <div class="feature-card">
+        <h3>界面直观</h3>
+        <p>没有过度装饰的动效或弹窗，主要操作路径一目了然，适合安静浏览。</p>
+      </div>
+      <div class="feature-card">
+        <h3>更新节奏</h3>
+        <p>内容保持适度更新，既不会信息过载，也能覆盖近期的热点或变动。</p>
+      </div>
+      <div class="feature-card">
+        <h3>来源标注</h3>
+        <p>多数引用或数据会注明出处，对判断信息真实性有一定帮助。</p>
+      </div>
+    </div>
+
+    <!-- 温和结尾段落 + 场景提示 + FAQ摘要风格 -->
+    <div class="gentle-closing">
+      <p>
+        当然，任何线上站点都只是信息渠道之一，<strong>雷竞技</strong> 也不例外。浏览时建议结合自己的经验做判断，尤其是涉及活动或服务选择的部分。网站会不定期调整栏目——比如近期新增了赛事复盘和社区讨论的入口，这些变化都体现在首页导航中。
+      </p>
+      <p>
+        <strong>一些常见问题：</strong> 站点是否免费？目前所有公开内容均可直接阅读，不需要注册。内容偏向哪类游戏？覆盖主流竞技项目（如 MOBA、FPS、格斗等），也涉及小部分休闲电竞。更新频率如何？大约每两天会有新文章或资讯汇总。
+      </p>
+      <p>
+        如果你对站点内容有兴趣，可以直接通过 <a href="https://chinese-rayesport.com">雷竞技</a> 进一步浏览。希望这份介绍能帮你更高效地了解它。
+      </p>
+    </div>
+
+    <!-- 底部小提示 / 变化性内容 -->
+    <div class="note-line">
+      <span>内容整理于近期公开信息</span>
+      <span>建议搭配其他来源交叉参考</span>
+      <span>© 本站为介绍页，非官方</span>
+    </div>
+
+  </main>
+
+</body>
+</html>
